@@ -1,6 +1,7 @@
+import React from "react";
 import { IBookList } from "../../../services/api";
 
-const FavouriteListUi = ({
+const FavouriteListUi = React.memo(({
   favList,
   HandleOpen
 }: {
@@ -23,6 +24,6 @@ const FavouriteListUi = ({
       </button>
     </div>
   );
-};
+});
 
 export default FavouriteListUi;

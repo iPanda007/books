@@ -5,6 +5,7 @@ import Bookcardui from "./Bookcardui";
 import Loading from "../../../components/loading";
 import { IBookService, IBookList } from "../../../services/api";
 import FavouriteContainer from "../../Favourite";
+import React from "react";
 
 type LayoutProps = {
   HandleSearch: (vlaue: ChangeEvent<HTMLInputElement>) => void;
@@ -14,13 +15,15 @@ type LayoutProps = {
   favList: IBookList[];
 };
 
-const Layout = ({
+const Layout = React.memo(({
   HandleSearch,
   data,
   loading,
   HandleSelect,
   favList,
 }: LayoutProps) => {
+
+
   const { total, books } = { ...data };
 
 
@@ -38,7 +41,7 @@ const Layout = ({
       {loading ? (
         <Loading />
       ) : (
-        <div className="grid grid-cols-3 gap-20 px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-20 px-10">
           {books !== undefined ? (
             <>
               {books?.map((item: IBookList) => (
@@ -60,6 +63,6 @@ const Layout = ({
       <FavouriteContainer favList={favList} />
     </div>
   );
-};
+});
 
 export default Layout;

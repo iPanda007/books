@@ -1,6 +1,7 @@
+import React from "react";
 import { IBookList } from "../../../services/api";
 
-const Bookcardui = ({
+const Bookcardui = React.memo(({
   id,
   title,
   image,
@@ -40,6 +41,6 @@ const Bookcardui = ({
       </div>
     </div>
   );
-};
+});
 
 export default Bookcardui;

@@ -17,9 +17,7 @@ export const useProviderValue = () => {
 
   const history = useNavigate();
 
-
-  console.log(value);
-
+  
   const { data, loading, refresh } = useRequest(() =>
     !value || value === "recent"
       ? apiBookService("recent")

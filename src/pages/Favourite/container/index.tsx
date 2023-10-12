@@ -2,8 +2,9 @@ import { useState } from "react";
 import FavouriteListUi from "../presentation/FavouriteListUi";
 import { IBookList } from "../../../services/api";
 import FavouriteListBox from "../presentation/FavouriteListBox";
+import React from "react";
 
-const ContainerIndex = ({ favList }: { favList: IBookList[] }) => {
+const ContainerIndex = React.memo(({ favList }: { favList: IBookList[] }) => {
 
   const [isOpen,setIsOpen]  = useState(false)
 
@@ -30,6 +31,6 @@ const ContainerIndex = ({ favList }: { favList: IBookList[] }) => {
       />
     </div>
   );
-};
+});
 
 export default ContainerIndex;

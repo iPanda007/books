@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = () => {
+const Header = React.memo(() => {
   return (
     <div className="p-2 mb-[50px] bg-white shadow-sm">
       <div className="">
@@ -11,6 +11,6 @@ const Header = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Header;
