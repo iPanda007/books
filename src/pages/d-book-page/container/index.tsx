@@ -1,5 +1,5 @@
 import { createSearchParams, useNavigate } from "react-router-dom";
-import { ChangeEvent, useState, useEffect, useMemo } from "react";
+import { ChangeEvent, useState, useEffect,  } from "react";
 import Layout from "../presentation/Layout";
 import { useBookServices } from "../../../context/BookServices";
 import { IBookList } from "../../../services/api";
@@ -10,7 +10,7 @@ const Container = () => {
 
   const { data: book } = { ...data };
 
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState("0");
 
   const query = useNavigate();
 
