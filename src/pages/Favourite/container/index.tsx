@@ -5,9 +5,7 @@ import FavouriteListBox from "../presentation/FavouriteListBox";
 import React from "react";
 
 
-// const Hello_World = ()=>(
-//   "hello"
-// )
+
 
 const ContainerIndex = React.memo(({ favList }: { favList: IBookList[] }) => {
 
