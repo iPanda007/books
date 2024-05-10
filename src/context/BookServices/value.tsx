@@ -13,7 +13,7 @@ export const useProviderValue = () => {
 
   const query = useQuery();
 
-  const value = query.get("q");
+  const value = query.get("q") || "0";
 
   const history = useNavigate();
 

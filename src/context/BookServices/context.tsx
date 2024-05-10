@@ -4,7 +4,7 @@ import { useProviderValue,Value } from "./value";
 
 export const context = createContext<Value>(undefined!)
 
-export const Provider = ({children}:{children:JSX.Element}) => {
+export  const Provider = ({children}:{children:JSX.Element}) => {
     const value = useProviderValue()
 
   return (
