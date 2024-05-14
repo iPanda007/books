@@ -8,10 +8,11 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+    types: submitted
 jobs:
-  if_merged:
-      if : github.event.pull_request.merged == true
   build:
+    if_merged:
+      if : github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -21,5 +22,5 @@ jobs:
         node-version: '20'
         cache: 'npm'
     - run: npm install
-    - run: npm run build
+    - run: npm run build 
  
