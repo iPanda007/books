@@ -22,7 +22,13 @@ jobs:
       with:
         node-version: '20'
         cache: 'npm'
+    - name: Install dependencies
     - run: npm install
+    - name: Build Package
     - run: npm run build 
-    - run: npm run lint:fix && npm run lint
+    - name: lint prefix
+    - run: npm run lint:fix
+    - name: lint code
+    - run: npm run lint
+    - name : lint commit
     - run: npm run lint:commit
