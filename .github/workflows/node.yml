@@ -24,3 +24,5 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run build 
+    - run: npm run lint:fix && npm run lint
+    - run: npm run lint:commit
