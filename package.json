@@ -12,7 +12,8 @@
     "preview": "vite preview",
     "lint:commit": "commitlint --edit",
     "lint:fix": "eslint --fix .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commitlint":"commitlint --edit"
   },
   "dependencies": {
     "ahooks": "^3.7.8",
