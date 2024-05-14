@@ -8,13 +8,13 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+        types: [closed]
 
 jobs:
+  if_merged:
+      if : github.event.pull_request.merged == true
   build:
-
     runs-on: ubuntu-latest
-
- 
     steps:
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
@@ -23,5 +23,5 @@ jobs:
         node-version: '20'
         cache: 'npm'
     - run: npm install
-    - run: npm run build
+    - run: npm run
  
