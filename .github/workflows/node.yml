@@ -10,15 +10,19 @@ on:
     branches: [ "master" ]
     # types: submitted
 jobs:
-  lint-code:
+  build:
+    name : Lint code
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 20
       uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'npm'
     - run: npm install
     - run: npm run lint:fix
+    - run: npm run commitlint --edit
+
+  
  
