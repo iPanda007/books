@@ -10,7 +10,7 @@ on:
     branches: [ "master" ]
     # types: submitted
 jobs:
-  build:
+  lint-code:
     name : Lint code
     runs-on: ubuntu-latest
     steps:
