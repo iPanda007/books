@@ -9,25 +9,29 @@ on:
     branches: [ "master" ]
     # types: submitted
 jobs:
-  codeLint:
+  Install-Dependency:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js '20'
       uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'npm'
     - run: npm install
-    - run: npm run lint:fix 
-commitlint:
-    needs: codeLint
-    runs-on: ubuntu-latest
-    name: Commitlint
-    steps:
+    # - run: npm run lint:fix 
+  codeLint:
+     needs: Install-Dependency
+     runs-on: ubuntu-latest
+      steps:
       - uses: actions/checkout@v4
-      - name: Run commitlint
-        uses: opensource-nepal/commitlint@v0.2.1
-    # - run: npm run build
+      - name: use Node.js '20'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      run: npm run lint:fix
+        
+  
 
  
