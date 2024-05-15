@@ -9,7 +9,7 @@ on:
     branches: [ "master" ]
     # types: submitted
 jobs:
-  Install-Dependency:
+   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
