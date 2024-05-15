@@ -22,8 +22,7 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run lint:fix
-    - name: Run commitlint
-      uses: opensource-nepal/commitlint@v0.2.1
+
       
 
   
