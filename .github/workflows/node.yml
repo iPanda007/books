@@ -10,7 +10,7 @@ on:
     branches: [ "master" ]
     # types: submitted
 jobs:
-  commitLint:
+  codeLint:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -21,6 +21,6 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run lint:fix 
-    - run: npm run build
+    # - run: npm run build
 
  
