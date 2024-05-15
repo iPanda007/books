@@ -1,0 +1,15 @@
+name: Commitlint
+
+on:
+  push:
+    branches: ['master']
+  pull_request: ['master']
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    name: Commitlint
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run commitlint
+        uses: opensource-nepal/commitlint@v0.2.1
