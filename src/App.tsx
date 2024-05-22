@@ -6,6 +6,7 @@ const App = () => {
 
   return (
     <div>
+   continuous Integration
         <AdminRoute/>
     </div>
   )
