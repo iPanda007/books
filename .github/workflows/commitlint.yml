@@ -1,14 +1,16 @@
+
 name: Commitlint
 
 on:
   push:
-    branches: ['main']
-  pull_request:
+    branches: ['master']
+  pull_request:  
+     branches: [ "master" ]
 
 jobs:
   lint-commit:
     runs-on: ubuntu-latest
-    name: Commitlint
+    name: Check conventional commit lint
     steps:
       - uses: actions/checkout@v4
 
