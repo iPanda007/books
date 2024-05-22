@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <div>
-   continuous Integration
+   continuous Integration code lint and type lint
         <AdminRoute/>
     </div>
   )
