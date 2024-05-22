@@ -1,0 +1,22 @@
+name: Books CI
+
+on:
+  push:
+    branches: ['master']
+  pull_request:  
+     branches: [ "master" ]
+     types: submitted
+
+jobs:
+  build:
+    name : To build for deploy
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js 20
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+    - run: npm install
+    - run: npm run build
