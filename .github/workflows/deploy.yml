@@ -18,6 +18,13 @@ jobs:
       with:
         node-version: '20'
         cache: 'npm'
+    - name: Make envfile
+      uses: SpicyPizza/create-envfile@v2.0
+      env:
+        with:
+        VITE_APP_API: ${{secrets.VITE_APP_API}}
+        file_name: .env
+    -name: Install dependency and build
     - run: |
            npm install
            npm run build
