@@ -9,7 +9,7 @@ const App = () => {
   useEffect(()=>{
     fetch(APP_API)
     .then(response => response.json())
-    .then(_json => {
+    .then(()=> {
        alert('Fetch success')
     })
   },[])
