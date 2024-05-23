@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <div>
-   continuous Integration code lint and type lint
+   continuous Integration code lint and type lint I am aung kyaw khaing
         <AdminRoute/>
     </div>
   )
