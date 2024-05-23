@@ -18,6 +18,15 @@ jobs:
       with:
         node-version: '20'
         cache: 'npm'
+  
+      - name: "Replace env variables (dev)"
+         uses: danielr1996/envsubst-action@1.0.0
+         env:
+            APP_ENV: ${{ vars.VITE_APP_API }}
+            API_KEY: ${{ secrets.VITE_APP_API }}
+         with:
+            output: .env
+    - name: "Install dependencies and build"
     - run: |
            npm install
            npm run build
