@@ -1,8 +1,9 @@
 import { useRoutes,Navigate } from "react-router-dom"
 import { BookList } from "./Element"
+import React from "react"
 
 
-const AdminRoute = () => {
+const AdminRoute = React.memo(() => {
 
 
   return useRoutes([
@@ -15,6 +16,6 @@ const AdminRoute = () => {
             element: <BookList/>
       }
   ])
-}
+})
 
 export default AdminRoute
