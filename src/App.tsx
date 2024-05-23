@@ -1,6 +1,6 @@
 
 import AdminRoute from './routes/AdminRoutes'
-import { Mode } from './services/environment'
+import { APP_API, Mode } from './services/environment'
 
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
 
   return (
     <div>
-   continuous Integration code lint and type lint Aung Kyaw Khaing {Mode}
+   continuous Integration code lint and type lint Aung Kyaw Khaing {Mode}  {APP_API}
         <AdminRoute/>
     </div>
   )
