@@ -5,7 +5,7 @@ import { APP_API, Mode } from './services/environment'
 
 
 const App = () => {
-
+ console.log("akk",APP_API,Mode)
   useEffect(()=>{
     fetch(APP_API)
     .then(response => response.json())
