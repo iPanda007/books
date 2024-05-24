@@ -13,15 +13,20 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v4
+    - name: Create .env file from secrets
+      run: |
+        echo "VITE_APP_API=${{ secrets.VITE_APP_API }}" >> .env
+    - name: Load environment variables from .env
+      run: |
+        set -a
+        source .env
+        set +a
+      shell: bash
     - name: Use Node.js 20
       uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'npm'
-    - name: Load environment variables
-      run: |
-        echo "Loading .env file"
-        export $(cat .env | xargs)
     - run: |
            npm install
            npm run build
