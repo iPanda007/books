@@ -15,7 +15,7 @@ const App = () => {
   },[])
   return (
     <div>
-   continuous Integration code lint and type lint Aung Kyaw Khaing {Mode}  {APP_API}
+   continuous Integration code lint and type lint Aung Kyaw Khaing {Mode}  Hello world I am fetching API
         <AdminRoute/>
     </div>
   )
